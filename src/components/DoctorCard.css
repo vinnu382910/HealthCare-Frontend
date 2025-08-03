@@ -1,0 +1,168 @@
+/* src/components/DoctorCard.css */
+
+.doctor-card {
+  background: var(--card, #fff);
+  color: var(--card-foreground, #000);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  box-shadow: var(--ds-shadow-small, 0 1px 2px rgba(0, 0, 0, 0.04));
+  transition: box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+}
+
+.doctor-card:hover {
+  box-shadow: var(--ds-shadow-large, 0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doctor-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-img-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-green-500, #10b981);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.doctor-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.doctor-name {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--color-gray-900, #111827);
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doctor-specialization {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-gray-600, #4b5563);
+  margin-bottom: 0.5rem;
+}
+
+.doctor-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-gray-600, #4b5563);
+  margin-bottom: 0.75rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.doctor-days .days-title {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--color-gray-500, #6b7280);
+  margin-bottom: 0.25rem;
+}
+
+.days-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.day-badge {
+  border: 1px solid var(--border, #e5e7eb);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 6px;
+  font-weight: 500;
+  background: white;
+  color: #333;
+}
+
+.availability {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: var(--text-xs, 0.75rem);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background-color: var(--primary, #000000);
+  color: var(--primary-foreground, #fff);
+}
+
+.card-footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-gray-50, #f9fafb);
+  border-top: 1px solid var(--border, #e5e7eb);
+}
+
+.book-btn {
+  width: 100%;
+  background-color: var(--primary, #000000);
+  color: var(--primary-foreground, #fff);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.book-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* ✅ Responsive layout fixes */
+@media (max-width: 768px) {
+  .doctor-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctor-name {
+    white-space: normal;
+  }
+
+  .meta-item {
+    justify-content: center;
+  }
+
+  .card-footer {
+    padding: 1rem;
+  }
+}

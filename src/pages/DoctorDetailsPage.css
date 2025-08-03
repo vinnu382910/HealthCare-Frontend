@@ -1,0 +1,44 @@
+/* src/pages/DoctorDetailsPage.css */
+
+.doctor-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doctor-details-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.appointment-section {
+  background-color: #f9f9f9;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-wrapper {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .doctor-details-main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .appointment-section {
+    flex: 1;
+    max-width: 48%;
+  }
+
+  .calendar-wrapper {
+    max-width: 48%;
+    margin-top: 0;
+  }
+}

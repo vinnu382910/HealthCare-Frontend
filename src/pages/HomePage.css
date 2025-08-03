@@ -1,0 +1,32 @@
+.homepage-container {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.doctor-grid {
+  display: grid;
+  gap: 2.5rem;
+  padding: 2rem 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .doctor-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1196px;
+    margin: 0 auto;
+  }
+}
