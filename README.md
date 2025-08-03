@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# 🏥 Healthcare Appointment Booking App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack responsive web application that allows patients to view doctors, check their availability, and book appointments online.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 📋 Book appointments with doctors
+- 📆 Select available dates and time slots
+- 📧 Real-time form validation with error messages
+- ✅ Confirmation messages on successful booking
+- 📱 Mobile-friendly and responsive UI
+- 🔒 Backend built with Node.js, Express, and MongoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 Tech Stack
 
-### `npm test`
+| Frontend               | Backend                         |
+|------------------------|----------------------------------|
+| React.js               | Node.js                         |
+| CSS (Responsive)       | Express.js                      |
+| React Router DOM       | MongoDB (Mongoose)              |
+| Fetch API              | Joi Validation, RESTful APIs    |
+| Custom Validation      | Cloud-hosted via Render         |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🌐 Live Backend URL
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend deployed on **Render**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👉 [`https://healthcare-backend-tc4i.onrender.com`](https://healthcare-backend-tc4i.onrender.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Backend Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+GitHub Link:  
+👉 [`vinnu382910/HealthCare-Backend`](https://github.com/vinnu382910/HealthCare-Backend)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 How to Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Clone the Repository
 
-## Learn More
+```bash
+git clone https://github.com/your-username/HealthCare-Frontend.git
+cd HealthCare-Frontend
+````
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Install Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+### 3. Run the Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+The app will run at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔐 Backend API Reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Endpoint            | Method | Description                     |
+| ------------------- | ------ | ------------------------------- |
+| `/api/doctors/:id`  | GET    | Fetch a single doctor's details |
+| `/api/appointments` | POST   | Book an appointment with doctor |
 
-### Advanced Configuration
+**POST /api/appointments Payload:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```json
+{
+  "doctorId": "string",
+  "patientName": "string",
+  "patientEmail": "string",
+  "date": "YYYY-MM-DD",
+  "time": "HH:mm"
+}
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📬 Contact
 
-### `npm run build` fails to minify
+**Developer:** Kalva Vinay (Vinay382910)
+📧 [vinaykalva382910@gmail.com](mailto:vinaykalva382910@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📃 License
+
+This project is licensed under the MIT License.
+Feel free to use, modify, and contribute!
+
+---
+
+## 🙌 Acknowledgments
+
+* UI inspired by modern appointment systems (like Practo & Zocdoc)
+* Backend hosted with [Render](https://render.com)
